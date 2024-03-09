@@ -62,12 +62,11 @@
     <div id="display"></div>
 
     <script>
-        // 直接在代码中定义学生列表
         const students = ["学生1", "学生2", "学生3", "学生4", "学生5",
                           "学生6", "学生7", "学生8", "学生9", "学生10",
                           "学生11", "学生12", "学生13", "学生14", "学生15"]; 
 
-        let numberToPick = 1; // 默认选择的学生人数
+        let numberToPick = 1;
 
         function setNumberToPick(number) {
             numberToPick = number;
@@ -89,7 +88,7 @@
             for (let i = 0; i < Math.min(numberToPick, students.length); i++) {
                 let randomIndex = Math.floor(Math.random() * copyOfStudents.length);
                 pickedStudents.push(copyOfStudents[randomIndex]);
-                copyOfStudents.splice(randomIndex, 1); // 移除已被选择的学生
+                copyOfStudents.splice(randomIndex, 1);
             }
 
             document.getElementById("display").innerText = pickedStudents.join(", ");
